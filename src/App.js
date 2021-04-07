@@ -1,8 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import CommentBox from './components/test/CommentBox';
-import CommentList from './components/test/CommentList';
 import { ConnectedRouter } from 'connected-react-router'
 import { Provider } from 'react-redux'
 import routesConfig from "./routers/index";
