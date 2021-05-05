@@ -4,6 +4,11 @@ import {
     Redirect
 } from "react-router-dom";
 
+export function renderAllRoutes(routesConfig, extraProps) {    
+    let routes = renderRoutes(routesConfig, extraProps);
+    return [...routes];
+}
+
 export function renderRoutes(routesConfig, extraProps=[]) {
     return routesConfig.map((item, index) => {
         const {path, exact, isProtected, isDynamic, component: Component, routes = [], loadingFallback} = item;

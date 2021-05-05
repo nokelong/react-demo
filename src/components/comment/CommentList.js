@@ -1,11 +1,9 @@
 import React from 'react';
 class CommentList extends React.Component {
     constructor(props) {
-        super(props);
-       
+        super(props);   
     }
-    onDelButton(index) {
-        console.log(index)
+    onDelButton(index) {        
         this.props.onDelButton(index)
     }
     render() {
@@ -17,7 +15,7 @@ class CommentList extends React.Component {
                     comments.map((comment, index) =>
                         <li key={index} data-index={index}>
                             <strong>{comment}</strong>
-                            <button onClick={(index) => this.onDelButton(index)}>删除改评论</button>
+                            <button onClick={this.onDelButton.bind(this,index)}>删除改评论</button>
                         </li>
                     )
                 }

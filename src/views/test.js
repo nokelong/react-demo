@@ -12,7 +12,7 @@ import Users from '../components/test/Users';
 class Index extends React.Component {
     render() {
         return(
-            <Router>
+            <Router>                
                 <div>
                     <ul>
                         <li>
@@ -29,7 +29,7 @@ class Index extends React.Component {
                         <Route path="/about">
                             <About></About>
                         </Route>
-                        <Route path="users">
+                        <Route path="/users">
                             <Users></Users>
                         </Route>
                         <Route path="/">

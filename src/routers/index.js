@@ -1,16 +1,21 @@
 
 import React from 'react'
-export default [
+import IndexPage from '../views/index'
+export default [   
     {
-    
-        path: '/test',
-        isDynamic: true,
-        // component: Login,
-        component: React.lazy(() => import('../views/test')),
-    },{
-        path: '/comment',
-        isDynamic: true,
-        // component: Login,
-        component: React.lazy(() => import('../views/comment')),
-    }
+        path: '/',
+        name: 'index-page',
+        component: IndexPage,
+        routes:[
+            {    
+                path: '/test',
+                isDynamic: true,
+                component: React.lazy(() => import('../views/test')),
+            },{
+                path: '/comment',
+                isDynamic: true,
+                component: React.lazy(() => import('../views/comment')),
+            }
+        ]
+    }  
 ]
